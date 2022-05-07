@@ -1,3 +1,5 @@
+from bdb import Breakpoint
+from cgitb import reset
 import time
 import os
 import socket
@@ -9,17 +11,16 @@ login_name = open('user/username.txt')
 l_p = login_pass.read()
 l_n = login_name.read()
 print("""
-      (^-^)
-     <(###)>
-        w
 
-        
-██████╗░███████╗███╗░░██╗░░░░█████╗░░██████╗
-██╔══██╗██╔════╝████╗░██║░░░██╔══██╗██╔════╝
-██████╔╝█████╗░░██╔██╗██║░░░██║░░██║╚█████╗░
-██╔═══╝░██╔══╝░░██║╚████║██╗██║░░██║░╚═══██╗
-██║░░░░░███████╗██║░╚███║╚█║╚█████╔╝██████╔╝
-╚═╝░░░░░╚══════╝╚═╝░░╚══╝░╚╝░╚════╝░╚═════╝░
+
+      🐧🐧🐧🐧
+  ____             ___  ____  
+ |  _ \ ___ _ __  / _ \/ ___| 
+ | |_) / _ \ '_ \| | | \___ \ 
+ |  __/  __/ | | | |_| |___) |
+ |_|   \___|_| |_|\___/|____/ 
+                               
+                                
    """)
 print("Welcome to PenOS, " + l_n)
 print("The Date Is: " + time.strftime("%d/%m/%y"))
@@ -63,6 +64,7 @@ if select == "4":
       print("""
       [1] To Change Username
       [2] To Change Password
+      [3] To Reset All Data
       """)
       host_name = socket.gethostname()
       host_ip = socket.gethostbyname(host_name)
@@ -71,6 +73,7 @@ if select == "4":
       print("HOST NAME: " + host_name)
       print("LOCAL IPS: " + host_ip)
       edit_b = input("Enter [1] or [2] to change setting: ")
+
       if edit_b == "1":
          edit_n = input("Enter New Username: ")
          with open('user/username.txt', 'w') as f:
@@ -85,5 +88,6 @@ if select == "4":
 
                print("Password Changed To: " + edit_p)
                input("Press Enter To Close")
+
       else:
           print("Wrong Password To " + l_n)
