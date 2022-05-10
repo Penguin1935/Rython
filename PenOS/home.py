@@ -6,14 +6,16 @@ import socket
 import psutil
 
 battery = psutil.sensors_battery()
-login_pass = open('user/password.txt')
-login_name = open('user/username.txt')
+login_pass = open('user/password.pass')
+login_name = open('user/username.pass')
 l_p = login_pass.read()
 l_n = login_name.read()
 print("""
 
 
-      🐧🐧🐧🐧
+      (^-^)
+     <(###)>
+        W
   ____             ___  ____  
  |  _ \ ___ _ __  / _ \/ ___| 
  | |_) / _ \ '_ \| | | \___ \ 
