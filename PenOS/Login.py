@@ -45,7 +45,7 @@ while True:
         time.sleep(0.2)
         print("Opening PenOS... ")
         time.sleep(1)
-        os.startfile("home.py")
+        os.startfile("Desktop.py")
         break
     else:
         print("Wrong Password.")
